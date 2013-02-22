@@ -1,0 +1,9 @@
+C:\Tmp\savers232\savers232\bin\Debug\savers232.exe
+C:\Tmp\savers232\savers232\bin\Debug\savers232.pdb
+C:\Tmp\savers232\savers232\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Tmp\savers232\savers232\obj\x86\Debug\savers232.Properties.Resources.resources
+C:\Tmp\savers232\savers232\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Tmp\savers232\savers232\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Tmp\savers232\savers232\obj\x86\Debug\savers232.exe
+C:\Tmp\savers232\savers232\obj\x86\Debug\savers232.pdb
+C:\Tmp\savers232\savers232\obj\x86\Debug\savers232.Form1.resources
