@@ -246,13 +246,15 @@ namespace savers232
             return bytes;
         }
 
-        // public static int ThreadProc(Form1 _form)
+        // public static int ThreadProc(Form1 _form) 
+        // test comment
         public static void DoWork(object data)
         {
 
             cont = true;
             do
             {
+               
                 if (((Form1)data).serialPort.BytesToRead > 0)
                 {
                     int rbyte = ((Form1)data).serialPort.ReadByte();
