@@ -1,0 +1,183 @@
+#%RAML 1.0
+title: Payment system
+version: 1.0
+baseUri: https://payment.checksystem.biz
+baseUriParamaters: {}
+documentation:
+- title: Payment system
+  content: 'TODO: Add Description'
+/registerUser:
+  get:
+    displayName: registerUser
+    description: 'TODO: Add Description'
+    queryParameters:
+      Id_Terminal:
+        required: true
+        displayName: Id_Terminal
+        type: integer
+        format: int32
+      Id_Group:
+        required: true
+        displayName: Id_Group
+        type: integer
+        format: int32
+/queryUser:
+  get:
+    displayName: queryUser
+    description: 'TODO: Add Description'
+    queryParameters:
+      Id_Terminal:
+        required: true
+        displayName: Id_Terminal
+        type: integer
+        format: int32
+      Customer:
+        required: true
+        displayName: Customer
+        type: integer
+        format: int32
+      Password:
+        required: true
+        displayName: Password
+        type: integer
+        format: int32
+/queryUserAndAgent:
+  get:
+    displayName: queryUserAndAgent
+    description: 'TODO: Add Description'
+    queryParameters:
+      Id_Terminal:
+        required: true
+        displayName: Id_Terminal
+        type: integer
+        format: int32
+      Customer:
+        required: true
+        displayName: Customer
+        type: integer
+        format: int32
+      Password:
+        required: true
+        displayName: Password
+        type: integer
+        format: int32
+/queryUserStatus:
+  get:
+    displayName: queryUserStatus
+    description: 'TODO: Add Description'
+    queryParameters:
+      Id_Terminal:
+        required: true
+        displayName: Id_Terminal
+        type: integer
+        format: int32
+      Customer:
+        required: true
+        displayName: Customer
+        type: integer
+        format: int32
+      Password:
+        required: true
+        displayName: Password
+        type: integer
+        format: int32
+/registerPayment:
+  get:
+    displayName: registerPayment - success
+    description: 'TODO: Add Description'
+    queryParameters:
+      transactionID:
+        required: true
+        displayName: transactionID
+        type: string
+      Id_Terminal:
+        required: true
+        displayName: Id_Terminal
+        type: integer
+        format: int32
+      Customer:
+        required: true
+        displayName: Customer
+        type: integer
+        format: int32
+      Password:
+        required: true
+        displayName: Password
+        type: integer
+        format: int32
+      Amount:
+        required: true
+        displayName: Amount
+        type: number
+        format: double
+/registerPayoutBegin:
+  get:
+    displayName: registerPayoutBegin - success
+    description: 'TODO: Add Description'
+    queryParameters:
+      transactionID:
+        required: true
+        displayName: transactionID
+        type: string
+      Id_Terminal:
+        required: true
+        displayName: Id_Terminal
+        type: integer
+        format: int32
+      Customer:
+        required: true
+        displayName: Customer
+        type: integer
+        format: int32
+      Password:
+        required: true
+        displayName: Password
+        type: integer
+        format: int32
+      Amount:
+        required: true
+        displayName: Amount
+        type: number
+        format: double
+/registerPayoutEnd:
+  get:
+    displayName: registerPayoutEnd - success
+    description: 'TODO: Add Description'
+    queryParameters:
+      transactionID:
+        required: true
+        displayName: transactionID
+        type: string
+      BeginTransactionID:
+        required: true
+        displayName: BeginTransactionID
+        type: string
+      Id_Terminal:
+        required: true
+        displayName: Id_Terminal
+        type: integer
+        format: int32
+      Customer:
+        required: true
+        displayName: Customer
+        type: integer
+        format: int32
+      Password:
+        required: true
+        displayName: Password
+        type: integer
+        format: int32
+      dispenseStatus:
+        required: true
+        displayName: dispenseStatus
+        type: string
+      Amount:
+        required: true
+        displayName: Amount
+        type: number
+        format: double
+      WithdrawalAmount:
+        required: true
+        displayName: WithdrawalAmount
+        type: number
+        format: double
