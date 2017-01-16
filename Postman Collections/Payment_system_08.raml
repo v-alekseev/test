@@ -1,0 +1,195 @@
+#%RAML 0.8
+title: Payment system
+version: 1.0
+documentation:
+- title: Payment system
+  content: 'TODO: Add Description'
+baseUri: https://payment.checksystem.biz
+baseUriParameters: {}
+/registerUser:
+  get:
+    displayName: registerUser
+    description: 'TODO: Add Description'
+    responses: {}
+    queryParameters:
+      Id_Terminal:
+        type: integer
+        example: 1234
+        required: true
+        displayName: Id_Terminal
+      Id_Group:
+        type: integer
+        example: 1
+        required: true
+        displayName: Id_Group
+/queryUser:
+  get:
+    displayName: queryUser
+    description: 'TODO: Add Description'
+    responses: {}
+    queryParameters:
+      Id_Terminal:
+        type: integer
+        example: 1234
+        required: true
+        displayName: Id_Terminal
+      Customer:
+        type: integer
+        example: 0000000168
+        required: true
+        displayName: Customer
+      Password:
+        type: integer
+        example: 8401
+        required: true
+        displayName: Password
+/queryUserAndAgent:
+  get:
+    displayName: queryUserAndAgent
+    description: 'TODO: Add Description'
+    responses: {}
+    queryParameters:
+      Id_Terminal:
+        type: integer
+        example: 1234
+        required: true
+        displayName: Id_Terminal
+      Customer:
+        type: integer
+        example: 0000000168
+        required: true
+        displayName: Customer
+      Password:
+        type: integer
+        example: 8401
+        required: true
+        displayName: Password
+/queryUserStatus:
+  get:
+    displayName: queryUserStatus
+    description: 'TODO: Add Description'
+    responses: {}
+    queryParameters:
+      Id_Terminal:
+        type: integer
+        example: 1234
+        required: true
+        displayName: Id_Terminal
+      Customer:
+        type: integer
+        example: 0000000168
+        required: true
+        displayName: Customer
+      Password:
+        type: integer
+        example: 8401
+        required: true
+        displayName: Password
+/registerPayment:
+  get:
+    displayName: registerPayment - success
+    description: 'TODO: Add Description'
+    responses: {}
+    queryParameters:
+      transactionID:
+        type: string
+        example: 20a160ff-2b9c-4669-973c-f0f0774b3c94
+        required: true
+        displayName: transactionID
+      Id_Terminal:
+        type: integer
+        example: 1234
+        required: true
+        displayName: Id_Terminal
+      Customer:
+        type: integer
+        example: 0000000168
+        required: true
+        displayName: Customer
+      Password:
+        type: integer
+        example: 8401
+        required: true
+        displayName: Password
+      Amount:
+        type: number
+        example: 100.00
+        required: true
+        displayName: Amount
+/registerPayoutBegin:
+  get:
+    displayName: registerPayoutBegin - success
+    description: 'TODO: Add Description'
+    responses: {}
+    queryParameters:
+      transactionID:
+        type: string
+        example: afcd142c-8f84-4a73-953c-3903c815fb52
+        required: true
+        displayName: transactionID
+      Id_Terminal:
+        type: integer
+        example: 1234
+        required: true
+        displayName: Id_Terminal
+      Customer:
+        type: integer
+        example: 0000000168
+        required: true
+        displayName: Customer
+      Password:
+        type: integer
+        example: 8401
+        required: true
+        displayName: Password
+      Amount:
+        type: number
+        example: 100.00
+        required: true
+        displayName: Amount
+/registerPayoutEnd:
+  get:
+    displayName: registerPayoutEnd - success
+    description: 'TODO: Add Description'
+    responses: {}
+    queryParameters:
+      transactionID:
+        type: string
+        example: 9881861d-9f8e-40a7-a7be-6e346b485590
+        required: true
+        displayName: transactionID
+      BeginTransactionID:
+        type: string
+        example: undefined
+        required: true
+        displayName: BeginTransactionID
+      Id_Terminal:
+        type: integer
+        example: 1234
+        required: true
+        displayName: Id_Terminal
+      Customer:
+        type: integer
+        example: 0000000168
+        required: true
+        displayName: Customer
+      Password:
+        type: integer
+        example: 8401
+        required: true
+        displayName: Password
+      dispenseStatus:
+        type: string
+        example: successful
+        required: true
+        displayName: dispenseStatus
+      Amount:
+        type: number
+        example: 100.00
+        required: true
+        displayName: Amount
+      WithdrawalAmount:
+        type: number
+        example: 100.00
+        required: true
+        displayName: WithdrawalAmount
