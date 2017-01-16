@@ -1,0 +1,431 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Payment system",
+    "description": "TODO: Add Description",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "payment.checksystem.biz",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/registerUser": {
+      "get": {
+        "description": "TODO: Add Description",
+        "tags": [
+          "1. Init req"
+        ],
+        "operationId": "registerUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Id_Terminal",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Id_Group",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/registerUser?Id_Terminal=1234&Id_Group=1"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "registerUser",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/queryUser": {
+      "get": {
+        "description": "TODO: Add Description",
+        "tags": [
+          "2. Information req"
+        ],
+        "operationId": "queryUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Id_Terminal",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Customer",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/queryUserAndAgent": {
+      "get": {
+        "description": "TODO: Add Description",
+        "tags": [
+          "2. Information req"
+        ],
+        "operationId": "queryUserAndAgent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Id_Terminal",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Customer",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/queryUserStatus": {
+      "get": {
+        "description": "TODO: Add Description",
+        "tags": [
+          "2. Information req"
+        ],
+        "operationId": "queryUserStatus",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Id_Terminal",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Customer",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/registerPayment": {
+      "get": {
+        "description": "TODO: Add Description",
+        "tags": [
+          "6. PayOut success"
+        ],
+        "operationId": "registerPayment - success",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transactionID",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Id_Terminal",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Customer",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Amount",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/registerPayoutBegin": {
+      "get": {
+        "description": "TODO: Add Description",
+        "tags": [
+          "6. PayOut success"
+        ],
+        "operationId": "registerPayoutBegin - success",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transactionID",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Id_Terminal",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Customer",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Amount",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/registerPayoutEnd": {
+      "get": {
+        "description": "TODO: Add Description",
+        "tags": [
+          "6. PayOut success"
+        ],
+        "operationId": "registerPayoutEnd - success",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transactionID",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "BeginTransactionID",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Id_Terminal",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Customer",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "dispenseStatus",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Amount",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "name": "WithdrawalAmount",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  }
+}
