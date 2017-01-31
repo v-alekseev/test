@@ -1,195 +1,414 @@
-#%RAML 0.8
-title: Payment system
-version: 1.0
-documentation:
-- title: Payment system
-  content: 'TODO: Add Description'
-baseUri: https://payment.checksystem.biz
-baseUriParameters: {}
-/registerUser:
-  get:
-    displayName: registerUser
-    description: 'TODO: Add Description'
-    responses: {}
-    queryParameters:
-      Id_Terminal:
-        type: integer
-        example: 1234
-        required: true
-        displayName: Id_Terminal
-      Id_Group:
-        type: integer
-        example: 1
-        required: true
-        displayName: Id_Group
-/queryUser:
-  get:
-    displayName: queryUser
-    description: 'TODO: Add Description'
-    responses: {}
-    queryParameters:
-      Id_Terminal:
-        type: integer
-        example: 1234
-        required: true
-        displayName: Id_Terminal
-      Customer:
-        type: integer
-        example: 0000000168
-        required: true
-        displayName: Customer
-      Password:
-        type: integer
-        example: 8401
-        required: true
-        displayName: Password
-/queryUserAndAgent:
-  get:
-    displayName: queryUserAndAgent
-    description: 'TODO: Add Description'
-    responses: {}
-    queryParameters:
-      Id_Terminal:
-        type: integer
-        example: 1234
-        required: true
-        displayName: Id_Terminal
-      Customer:
-        type: integer
-        example: 0000000168
-        required: true
-        displayName: Customer
-      Password:
-        type: integer
-        example: 8401
-        required: true
-        displayName: Password
-/queryUserStatus:
-  get:
-    displayName: queryUserStatus
-    description: 'TODO: Add Description'
-    responses: {}
-    queryParameters:
-      Id_Terminal:
-        type: integer
-        example: 1234
-        required: true
-        displayName: Id_Terminal
-      Customer:
-        type: integer
-        example: 0000000168
-        required: true
-        displayName: Customer
-      Password:
-        type: integer
-        example: 8401
-        required: true
-        displayName: Password
-/registerPayment:
-  get:
-    displayName: registerPayment - success
-    description: 'TODO: Add Description'
-    responses: {}
-    queryParameters:
-      transactionID:
-        type: string
-        example: 4b8de61c-1c57-4dd1-b4f4-11b22a238442
-        required: true
-        displayName: transactionID
-      Id_Terminal:
-        type: integer
-        example: 1234
-        required: true
-        displayName: Id_Terminal
-      Customer:
-        type: integer
-        example: 0000000168
-        required: true
-        displayName: Customer
-      Password:
-        type: integer
-        example: 8401
-        required: true
-        displayName: Password
-      Amount:
-        type: number
-        example: 100.00
-        required: true
-        displayName: Amount
-/registerPayoutBegin:
-  get:
-    displayName: registerPayoutBegin - success
-    description: 'TODO: Add Description'
-    responses: {}
-    queryParameters:
-      transactionID:
-        type: string
-        example: ad6ae296-0976-4702-96ad-f03ec95eed5f
-        required: true
-        displayName: transactionID
-      Id_Terminal:
-        type: integer
-        example: 1234
-        required: true
-        displayName: Id_Terminal
-      Customer:
-        type: integer
-        example: 0000000168
-        required: true
-        displayName: Customer
-      Password:
-        type: integer
-        example: 8401
-        required: true
-        displayName: Password
-      Amount:
-        type: number
-        example: 100.00
-        required: true
-        displayName: Amount
-/registerPayoutEnd:
-  get:
-    displayName: registerPayoutEnd - success
-    description: 'TODO: Add Description'
-    responses: {}
-    queryParameters:
-      transactionID:
-        type: string
-        example: ea077b6f-c49a-4c1e-96dc-0789073fa55b
-        required: true
-        displayName: transactionID
-      BeginTransactionID:
-        type: string
-        example: undefined
-        required: true
-        displayName: BeginTransactionID
-      Id_Terminal:
-        type: integer
-        example: 1234
-        required: true
-        displayName: Id_Terminal
-      Customer:
-        type: integer
-        example: 0000000168
-        required: true
-        displayName: Customer
-      Password:
-        type: integer
-        example: 8401
-        required: true
-        displayName: Password
-      dispenseStatus:
-        type: string
-        example: successful
-        required: true
-        displayName: dispenseStatus
-      Amount:
-        type: number
-        example: 100.00
-        required: true
-        displayName: Amount
-      WithdrawalAmount:
-        type: number
-        example: 100.00
-        required: true
-        displayName: WithdrawalAmount
+{
+  "variables": [],
+  "info": {
+    "name": "Payment system",
+    "_postman_id": "1388535-66dc14dc-6c28-0db3-5d95-2c5fcf948827",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "1388535-13a7d76f-1e08-e240-9344-584df160628d",
+      "name": "1. Init req",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1388535-86ad8bc3-5d03-3451-c68f-4f61f21c1c85",
+          "name": "registerUser",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "tests[\"JSON contain Customer\"] = responseBody.has('Customer');",
+                  "tests[\"JSON contain Password\"] = responseBody.has('Password');",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Id_Group == get param 'Id_Group'\"] = (jsonData.Id_Group === postman.getEnvironmentVariable(\"groupid\"));",
+                  "",
+                  "postman.setEnvironmentVariable(\"user\", jsonData.Customer);",
+                  "postman.setEnvironmentVariable(\"password\", jsonData.Password);",
+                  "",
+                  "//console.log(\"Validation failed: \");",
+                  "//{{$guid}}: Adds a v4 style guid",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// MB8 ?0@0<5B@K 70?>;=ONBAO 40;55 2 AF5=0@88",
+                  "",
+                  "// MB8 2 registrerUser ",
+                  "postman.setEnvironmentVariable(\"user\", \"uninitialize\");",
+                  "postman.setEnvironmentVariable(\"password\", \"uninitialize\");",
+                  "// MB>B 2 registerPayotBegin",
+                  "postman.setEnvironmentVariable(\"last_registerPayoutBeginTrID\", \"uninitialize\");",
+                  "",
+                  "// MB>B 2 registerPayment ",
+                  "postman.setEnvironmentVariable(\"user_balans\", \"uninitialize\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/registerUser?Id_Terminal=1234&Id_Group=1",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1388535-683f89e8-ecdc-d14a-53da-cb85bf7a1ea8",
+      "name": "2. Information req",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1388535-ff172ae0-afda-3445-4046-a89b53d40c5d",
+          "name": "queryUser",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/queryUser?Id_Terminal=1234&Customer=0000000168&Password=8401",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1388535-c1934c30-e43e-07a0-246a-4cfe82802da7",
+          "name": "queryUserAndAgent",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/queryUserAndAgent?Id_Terminal=1234&Customer=0000000168&Password=8401",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1388535-8c44de80-7c99-b6b6-55f4-d19a5f24a998",
+          "name": "queryUserStatus",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/queryUserStatus?Id_Terminal=1234&Customer=0000000168&Password=8401",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1388535-d7ce879d-9823-b995-6f81-a964c29a3fa0",
+      "name": "3. PayIn (empty)",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1388535-14161c2b-70f3-5cad-3039-75c4135e9001",
+          "name": "registerPayment - success",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Amount == get url param 'amount'\"] = (jsonData.Amount === postman.getEnvironmentVariable(\"amount\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));",
+                  "",
+                  "postman.setEnvironmentVariable(\"user_balans\", jsonData.Balance);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/registerPayment?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1388535-356de311-3255-975f-9e57-d8411d65311c",
+      "name": "5. PayOut fail",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1388535-34c68835-8bcc-58ca-8b0e-60659a91568f",
+          "name": "registerPayment - fail",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Amount == get url param 'amount'\"] = (jsonData.Amount === postman.getEnvironmentVariable(\"amount\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));",
+                  "",
+                  "postman.setEnvironmentVariable(\"user_balans\", jsonData.Balance);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/registerPayment?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1388535-29e3261f-279d-e59a-36c1-0012f8ad300d",
+          "name": "registerPayoutBegin - fail",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Amount == get url param 'amount'\"] = (jsonData.Amount === postman.getEnvironmentVariable(\"amount\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));",
+                  "",
+                  "postman.setEnvironmentVariable(\"last_registerPayoutBeginTrID\", jsonData.transactionID);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/registerPayoutBegin?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1388535-b678064a-3294-d0c7-9f88-7340aacc25b0",
+          "name": "registerPayoutEnd - fail",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Amount == get url param 'amount'\"] = (jsonData.Amount === postman.getEnvironmentVariable(\"amount\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));",
+                  "",
+                  "",
+                  "",
+                  "tests[\"User balans is not changed\"] = (jsonData.Balance === postman.getEnvironmentVariable(\"user_balans\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/registerPayoutEnd?transactionID={{$guid}}&BeginTransactionID=undefined&Id_Terminal=1234&Customer=0000000168&Password=8401&dispenseStatus=fail&Amount=100.00&WithdrawalAmount=0.00",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1388535-2bf9303d-d2a7-6e9f-26eb-2e1d777d443d",
+      "name": "6. PayOut success",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1388535-1e44211f-ca6a-19a5-4acb-746e2cd8090a",
+          "name": "registerPayment - success",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Amount == get url param 'amount'\"] = (jsonData.Amount === postman.getEnvironmentVariable(\"amount\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));",
+                  "",
+                  "postman.setEnvironmentVariable(\"user_balans\", jsonData.Balance);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/registerPayment?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1388535-ed2f618b-9395-1a4b-10db-2fa39b96c7a8",
+          "name": "registerPayoutBegin - success",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Amount == get url param 'amount'\"] = (jsonData.Amount === postman.getEnvironmentVariable(\"amount\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));",
+                  "",
+                  "postman.setEnvironmentVariable(\"last_registerPayoutBeginTrID\", jsonData.transactionID);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/registerPayoutBegin?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1388535-86877a53-45da-26e6-0d5c-881098c0f36e",
+          "name": "registerPayoutEnd - success",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Customer == get url param 'Customer'\"] = (jsonData.Customer === postman.getEnvironmentVariable(\"user\"));",
+                  "tests[\"Amount == get url param 'amount'\"] = (jsonData.Amount === postman.getEnvironmentVariable(\"amount\"));",
+                  "tests[\"Id_Terminal == get url param 'terminal'\"] = (jsonData.Id_Terminal === postman.getEnvironmentVariable(\"terminal\"));",
+                  "",
+                  "tests[\"User balans was changed correctly\"] = (parseInt(jsonData.Balance) === (parseInt(postman.getEnvironmentVariable(\"user_balans\")) - parseInt(postman.getEnvironmentVariable(\"amount\"))));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://payment.checksystem.biz/registerPayoutEnd?transactionID={{$guid}}&BeginTransactionID=undefined&Id_Terminal=1234&Customer=0000000168&Password=8401&dispenseStatus=successful&Amount=100.00&WithdrawalAmount=100.00",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
