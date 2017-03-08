@@ -4,8 +4,13 @@ version: 1.0
 documentation:
 - title: Payment system
   content: 'TODO: Add Description'
-baseUri: https://payment.checksystem.biz
-baseUriParameters: {}
+baseUri: https://{{url}}
+baseUriParameters:
+  url:
+    type: string
+    default: DefaultParameterValue
+    required: true
+    displayName: url
 /registerUser:
   get:
     displayName: registerUser
@@ -13,13 +18,13 @@ baseUriParameters: {}
     responses: {}
     queryParameters:
       Id_Terminal:
-        type: integer
-        example: 1234
+        type: string
+        example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Id_Group:
-        type: integer
-        example: 1
+        type: string
+        example: '{{groupid}}'
         required: true
         displayName: Id_Group
 /queryUser:
@@ -29,18 +34,18 @@ baseUriParameters: {}
     responses: {}
     queryParameters:
       Id_Terminal:
-        type: integer
-        example: 1234
+        type: string
+        example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        type: integer
-        example: 0000000168
+        type: string
+        example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        type: integer
-        example: 8401
+        type: string
+        example: '{{password}}'
         required: true
         displayName: Password
 /queryUserAndAgent:
@@ -50,18 +55,18 @@ baseUriParameters: {}
     responses: {}
     queryParameters:
       Id_Terminal:
-        type: integer
-        example: 1234
+        type: string
+        example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        type: integer
-        example: 0000000168
+        type: string
+        example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        type: integer
-        example: 8401
+        type: string
+        example: '{{password}}'
         required: true
         displayName: Password
 /queryUserStatus:
@@ -71,18 +76,18 @@ baseUriParameters: {}
     responses: {}
     queryParameters:
       Id_Terminal:
-        type: integer
-        example: 1234
+        type: string
+        example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        type: integer
-        example: 0000000168
+        type: string
+        example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        type: integer
-        example: 8401
+        type: string
+        example: '{{password}}'
         required: true
         displayName: Password
 /registerPayment:
@@ -93,27 +98,27 @@ baseUriParameters: {}
     queryParameters:
       transactionID:
         type: string
-        example: 36b9b8e2-825b-4131-82a3-5294450748f0
+        example: 233d89bc-b9c6-49ef-a23c-c637c20e8b90
         required: true
         displayName: transactionID
       Id_Terminal:
-        type: integer
-        example: 1234
+        type: string
+        example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        type: integer
-        example: 0000000168
+        type: string
+        example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        type: integer
-        example: 8401
+        type: string
+        example: '{{password}}'
         required: true
         displayName: Password
       Amount:
-        type: number
-        example: 100.00
+        type: string
+        example: '{{amount}}'
         required: true
         displayName: Amount
 /registerPayoutBegin:
@@ -124,27 +129,27 @@ baseUriParameters: {}
     queryParameters:
       transactionID:
         type: string
-        example: 96b99fd4-2647-4a34-8bbb-4a663635f2fb
+        example: 07a072e6-fb84-4de6-bcd3-f9ae76cb1bcb
         required: true
         displayName: transactionID
       Id_Terminal:
-        type: integer
-        example: 1234
+        type: string
+        example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        type: integer
-        example: 0000000168
+        type: string
+        example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        type: integer
-        example: 8401
+        type: string
+        example: '{{password}}'
         required: true
         displayName: Password
       Amount:
-        type: number
-        example: 100.00
+        type: string
+        example: '{{amount}}'
         required: true
         displayName: Amount
 /registerPayoutEnd:
@@ -155,27 +160,27 @@ baseUriParameters: {}
     queryParameters:
       transactionID:
         type: string
-        example: ee52e90a-f5bf-4e63-9d86-1f9645133475
+        example: 511e7579-5542-4d3c-8194-d00984fa1440
         required: true
         displayName: transactionID
       BeginTransactionID:
         type: string
-        example: undefined
+        example: '{{last_registerPayoutBeginTrID}}'
         required: true
         displayName: BeginTransactionID
       Id_Terminal:
-        type: integer
-        example: 1234
+        type: string
+        example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        type: integer
-        example: 0000000168
+        type: string
+        example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        type: integer
-        example: 8401
+        type: string
+        example: '{{password}}'
         required: true
         displayName: Password
       dispenseStatus:
@@ -184,12 +189,12 @@ baseUriParameters: {}
         required: true
         displayName: dispenseStatus
       Amount:
-        type: number
-        example: 100.00
+        type: string
+        example: '{{amount}}'
         required: true
         displayName: Amount
       WithdrawalAmount:
-        type: number
-        example: 100.00
+        type: string
+        example: '{{amount}}'
         required: true
         displayName: WithdrawalAmount
