@@ -204,7 +204,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/registerPayment?transactionID=9da220fd-f8d4-4ea6-b885-01a7948b1618&Id_Terminal=1234&Customer=0000000015&Password=1541&Amount=100.00"
+              "uri": "/registerPayment?transactionID=23ed7c6f-4ef0-4f43-a5da-7357ab15c96e&Id_Terminal=1234&Customer=0000000015&Password=1541&Amount=100.00"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -284,7 +284,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/registerPayoutBegin?transactionID=38bcaf45-697e-470b-af4e-ac514eb97510&Id_Terminal=1234&Customer=0000000015&Password=1541&Amount=100.00"
+              "uri": "/registerPayoutBegin?transactionID=fcc4a97c-4acb-4663-ac63-6488e53bb61a&Id_Terminal=1234&Customer=0000000015&Password=1541&Amount=100.00"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
