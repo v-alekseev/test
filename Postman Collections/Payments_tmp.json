@@ -10,7 +10,7 @@
     }
   },
   "host": "payment-dev.checksystem.biz",
-  "basePath": "/",
+  "basePath": "",
   "schemes": [
     "https"
   ],
@@ -204,7 +204,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/registerPayment?transactionID=b5e4f90c-7dc9-4d04-99e4-b77c6ea3adda&Id_Terminal=1234&Customer=0000000030&Password=1486&Amount=100.00"
+              "uri": "/registerPayment?transactionID=d2d1582b-afc6-4f27-b71c-1c31f9207b72&Id_Terminal=1234&Customer=0000000030&Password=1486&Amount=100.00"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -284,7 +284,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/registerPayoutBegin?transactionID=c135aa2f-f4ae-4391-afc3-06772669bf7c&Id_Terminal=1234&Customer=0000000030&Password=1486&Amount=100.00"
+              "uri": "/registerPayoutBegin?transactionID=bbf0179b-15b2-40e3-b551-da68e1dd04ad&Id_Terminal=1234&Customer=0000000030&Password=1486&Amount=100.00"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
