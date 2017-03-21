@@ -98,7 +98,7 @@ baseUriParameters:
     queryParameters:
       transactionID:
         type: string
-        example: 7268b38f-be23-497f-8e09-ff57da0f08a8
+        example: 66ec75b1-db7d-4998-9141-1fb598ffa402
         required: true
         displayName: transactionID
       Id_Terminal:
@@ -123,13 +123,13 @@ baseUriParameters:
         displayName: Amount
 /registerPayoutBegin:
   get:
-    displayName: registerPayoutBegin - success
+    displayName: registerPayoutBegin - fail
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       transactionID:
         type: string
-        example: d8f62905-a2b6-4214-9e61-de6043d59f75
+        example: dd10c8f0-a07f-4c31-a687-34f7d2e46074
         required: true
         displayName: transactionID
       Id_Terminal:
@@ -154,13 +154,13 @@ baseUriParameters:
         displayName: Amount
 /registerPayoutEnd:
   get:
-    displayName: registerPayoutEnd - success
+    displayName: registerPayoutEnd - fail
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       transactionID:
         type: string
-        example: 03ab4ebc-eb22-4af3-9d15-906b8444969a
+        example: 14036f05-8e57-46d3-aa14-f46db121a55c
         required: true
         displayName: transactionID
       BeginTransactionID:
@@ -185,7 +185,7 @@ baseUriParameters:
         displayName: Password
       dispenseStatus:
         type: string
-        example: successful
+        example: fail
         required: true
         displayName: dispenseStatus
       Amount:
@@ -194,7 +194,7 @@ baseUriParameters:
         required: true
         displayName: Amount
       WithdrawalAmount:
-        type: string
-        example: '{{amount}}'
+        type: number
+        example: 0.00
         required: true
         displayName: WithdrawalAmount
