@@ -9,7 +9,7 @@ baseUriParameters:
   url:
     type: string
     default: DefaultParameterValue
-    required: true
+    required: false
     displayName: url
 /registerUser:
   get:
@@ -18,13 +18,17 @@ baseUriParameters:
     responses: {}
     queryParameters:
       Id_Terminal:
+        description: ''
         type: string
         example: '{{terminal}}'
+        default: ''
         required: true
         displayName: Id_Terminal
       Id_Group:
+        description: ''
         type: string
         example: '{{groupid}}'
+        default: ''
         required: true
         displayName: Id_Group
 /queryUser:
@@ -34,18 +38,24 @@ baseUriParameters:
     responses: {}
     queryParameters:
       Id_Terminal:
+        description: ''
         type: string
         example: '{{terminal}}'
+        default: ''
         required: true
         displayName: Id_Terminal
       Customer:
+        description: ''
         type: string
         example: '{{user}}'
+        default: ''
         required: true
         displayName: Customer
       Password:
+        description: ''
         type: string
         example: '{{password}}'
+        default: ''
         required: true
         displayName: Password
 /queryUserAndAgent:
@@ -55,18 +65,24 @@ baseUriParameters:
     responses: {}
     queryParameters:
       Id_Terminal:
+        description: ''
         type: string
         example: '{{terminal}}'
+        default: ''
         required: true
         displayName: Id_Terminal
       Customer:
+        description: ''
         type: string
         example: '{{user}}'
+        default: ''
         required: true
         displayName: Customer
       Password:
+        description: ''
         type: string
         example: '{{password}}'
+        default: ''
         required: true
         displayName: Password
 /queryUserStatus:
@@ -76,18 +92,24 @@ baseUriParameters:
     responses: {}
     queryParameters:
       Id_Terminal:
+        description: ''
         type: string
         example: '{{terminal}}'
+        default: ''
         required: true
         displayName: Id_Terminal
       Customer:
+        description: ''
         type: string
         example: '{{user}}'
+        default: ''
         required: true
         displayName: Customer
       Password:
+        description: ''
         type: string
         example: '{{password}}'
+        default: ''
         required: true
         displayName: Password
 /registerPayment:
@@ -97,28 +119,38 @@ baseUriParameters:
     responses: {}
     queryParameters:
       transactionID:
+        description: ''
         type: string
-        example: 85e9f2d1-d7a7-4305-b263-7aee23045836
+        example: 0cab9f35-7bdc-4c92-be97-98f2fae6ad05
+        default: ''
         required: true
         displayName: transactionID
       Id_Terminal:
+        description: ''
         type: string
         example: '{{terminal}}'
+        default: ''
         required: true
         displayName: Id_Terminal
       Customer:
+        description: ''
         type: string
         example: '{{user}}'
+        default: ''
         required: true
         displayName: Customer
       Password:
+        description: ''
         type: string
         example: '{{password}}'
+        default: ''
         required: true
         displayName: Password
       Amount:
+        description: ''
         type: string
         example: '{{amount}}'
+        default: ''
         required: true
         displayName: Amount
 /registerPayoutBegin:
@@ -128,28 +160,38 @@ baseUriParameters:
     responses: {}
     queryParameters:
       transactionID:
+        description: ''
         type: string
-        example: da95e251-08b1-42ce-ba33-5c9d65fd04ee
+        example: 4d3b338b-5c7e-4c21-be07-fb09e3afb7a6
+        default: ''
         required: true
         displayName: transactionID
       Id_Terminal:
+        description: ''
         type: string
         example: '{{terminal}}'
+        default: ''
         required: true
         displayName: Id_Terminal
       Customer:
+        description: ''
         type: string
         example: '{{user}}'
+        default: ''
         required: true
         displayName: Customer
       Password:
+        description: ''
         type: string
         example: '{{password}}'
+        default: ''
         required: true
         displayName: Password
       Amount:
+        description: ''
         type: string
         example: '{{amount}}'
+        default: ''
         required: true
         displayName: Amount
 /registerPayoutEnd:
@@ -159,42 +201,58 @@ baseUriParameters:
     responses: {}
     queryParameters:
       transactionID:
+        description: ''
         type: string
-        example: f481b7ff-11fe-440f-833f-4d9352ee99ea
+        example: 38ffc233-e0b8-47fe-919c-af06ba21b9a7
+        default: ''
         required: true
         displayName: transactionID
       BeginTransactionID:
+        description: ''
         type: string
         example: '{{last_registerPayoutBeginTrID}}'
+        default: ''
         required: true
         displayName: BeginTransactionID
       Id_Terminal:
+        description: ''
         type: string
         example: '{{terminal}}'
+        default: ''
         required: true
         displayName: Id_Terminal
       Customer:
+        description: ''
         type: string
         example: '{{user}}'
+        default: ''
         required: true
         displayName: Customer
       Password:
+        description: ''
         type: string
         example: '{{password}}'
+        default: ''
         required: true
         displayName: Password
       dispenseStatus:
+        description: ''
         type: string
         example: fail
+        default: ''
         required: true
         displayName: dispenseStatus
       Amount:
+        description: ''
         type: string
         example: '{{amount}}'
+        default: ''
         required: true
         displayName: Amount
       WithdrawalAmount:
+        description: ''
         type: number
         example: 0.00
+        default: ''
         required: true
         displayName: WithdrawalAmount
