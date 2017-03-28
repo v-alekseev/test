@@ -37,14 +37,16 @@
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Id_Group",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           }
         ],
         "responses": {
@@ -97,21 +99,24 @@
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Customer",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Password",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           }
         ],
         "responses": {
@@ -163,35 +168,40 @@
             "name": "transactionID",
             "in": "query",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": ""
           },
           {
             "name": "Id_Terminal",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Customer",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Password",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Amount",
             "in": "query",
             "required": true,
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": ""
           }
         ],
         "responses": {
@@ -204,7 +214,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/registerPayment?transactionID=6fc6bb95-9da9-4b10-ba8e-55fb0243e53b&Id_Terminal=1234&Customer=0000000030&Password=1486&Amount=100.00"
+              "uri": "/registerPayment?transactionID=61615794-c9ce-49d2-9ce6-6c4d0bcadd15&Id_Terminal=1234&Customer=0000000030&Password=1486&Amount=100.00"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -243,35 +253,40 @@
             "name": "transactionID",
             "in": "query",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": ""
           },
           {
             "name": "Id_Terminal",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Customer",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Password",
             "in": "query",
             "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": ""
           },
           {
             "name": "Amount",
             "in": "query",
             "required": true,
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": ""
           }
         ],
         "responses": {
@@ -284,7 +299,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/registerPayoutBegin?transactionID=ad1bea2e-9e81-4560-9bd8-1a98eb813aa2&Id_Terminal=1234&Customer=0000000030&Password=1486&Amount=100.00"
+              "uri": "/registerPayoutBegin?transactionID=9a61d3c1-950f-41a1-aed6-6c03e75814a3&Id_Terminal=1234&Customer=0000000030&Password=1486&Amount=100.00"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
