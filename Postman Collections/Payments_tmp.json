@@ -24,6 +24,7 @@
     "/registerUser": {
       "get": {
         "description": "TODO: Add Description",
+        "summary": "registerUser copy",
         "tags": [
           "Misc"
         ],
@@ -86,6 +87,7 @@
     "/queryUser": {
       "get": {
         "description": "TODO: Add Description",
+        "summary": "queryUser copy",
         "tags": [
           "Misc"
         ],
@@ -137,6 +139,7 @@
     "/registerPayment": {
       "get": {
         "description": "TODO: Add Description",
+        "summary": "registerPayment",
         "tags": [
           "Misc"
         ],
@@ -203,6 +206,7 @@
     "/registerPayoutBegin": {
       "get": {
         "description": "TODO: Add Description",
+        "summary": "registerPayoutBegin - 3",
         "tags": [
           "Misc"
         ],
