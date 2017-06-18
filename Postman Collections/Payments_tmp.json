@@ -9,7 +9,7 @@
       "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
     }
   },
-  "host": "payment-dev.checksystem.biz",
+  "host": "api.mors.site",
   "basePath": "/",
   "schemes": [
     "https"
@@ -108,16 +108,14 @@
             "name": "Customer",
             "in": "query",
             "required": true,
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "description": ""
           },
           {
             "name": "Password",
             "in": "query",
             "required": true,
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "description": ""
           }
         ],
@@ -131,7 +129,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/queryUser?Id_Terminal=1234&Customer=0000000071&Password=5522"
+              "uri": "/queryUser?Id_Terminal=1234&Customer=undefined&Password=undefined"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -186,16 +184,14 @@
             "name": "Customer",
             "in": "query",
             "required": true,
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "description": ""
           },
           {
             "name": "Password",
             "in": "query",
             "required": true,
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "description": ""
           },
           {
@@ -217,7 +213,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/registerPayment?transactionID=a715004b-52b0-43b4-9f0b-8d4cb488a877&Id_Terminal=1234&Customer=0000000071&Password=5522&Amount=100.00"
+              "uri": "/registerPayment?transactionID=5bf68468-8252-4fac-a650-ea844525bb4c&Id_Terminal=1234&Customer=undefined&Password=undefined&Amount=100.00"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -272,16 +268,14 @@
             "name": "Customer",
             "in": "query",
             "required": true,
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "description": ""
           },
           {
             "name": "Password",
             "in": "query",
             "required": true,
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "description": ""
           },
           {
@@ -303,7 +297,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/registerPayoutBegin?transactionID=6509fa69-031a-420e-a4f7-8febcf9e99ac&Id_Terminal=1234&Customer=0000000071&Password=5522&Amount=100.00"
+              "uri": "/registerPayoutBegin?transactionID=40094490-79b7-471a-8bc8-a7f0a3403c88&Id_Terminal=1234&Customer=undefined&Password=undefined&Amount=100.00"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
