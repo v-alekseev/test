@@ -4,14 +4,8 @@ version: 1.0
 documentation:
 - title: Payment system
   content: 'TODO: Add Description'
-baseUri: https://{{url}}
-baseUriParameters:
-  url:
-    type: string
-    example: ''
-    default: DefaultParameterValue
-    required: false
-    displayName: url
+baseUri: http://example.com
+baseUriParameters: {}
 /registerUser:
   get:
     displayName: registerUser
@@ -59,9 +53,9 @@ baseUriParameters:
         default: ''
         required: true
         displayName: Password
-/queryUserAndAgent:
+/querySystemStatus:
   get:
-    displayName: queryUserAndAgent
+    displayName: querySystemStatus
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
@@ -72,47 +66,6 @@ baseUriParameters:
         default: ''
         required: true
         displayName: Id_Terminal
-      Customer:
-        description: ''
-        type: string
-        example: '{{user}}'
-        default: ''
-        required: true
-        displayName: Customer
-      Password:
-        description: ''
-        type: string
-        example: '{{password}}'
-        default: ''
-        required: true
-        displayName: Password
-/queryUserStatus:
-  get:
-    displayName: queryUserStatus
-    description: 'TODO: Add Description'
-    responses: {}
-    queryParameters:
-      Id_Terminal:
-        description: ''
-        type: string
-        example: '{{terminal}}'
-        default: ''
-        required: true
-        displayName: Id_Terminal
-      Customer:
-        description: ''
-        type: string
-        example: '{{user}}'
-        default: ''
-        required: true
-        displayName: Customer
-      Password:
-        description: ''
-        type: string
-        example: '{{password}}'
-        default: ''
-        required: true
-        displayName: Password
 /registerPayment:
   get:
     displayName: registerPayment - success
@@ -122,7 +75,7 @@ baseUriParameters:
       transactionID:
         description: ''
         type: string
-        example: aee21ac7-921e-452f-80e0-bafb4d8a4561
+        example: eaa8fd78-aefc-4e01-98bb-8391b335dc2f
         default: ''
         required: true
         displayName: transactionID
@@ -163,7 +116,7 @@ baseUriParameters:
       transactionID:
         description: ''
         type: string
-        example: 39576b46-65a9-4acb-99a9-c1f0f3f70b42
+        example: 1b3bbd27-8424-4b55-a343-2cf1fc5b137d
         default: ''
         required: true
         displayName: transactionID
@@ -204,7 +157,7 @@ baseUriParameters:
       transactionID:
         description: ''
         type: string
-        example: 7ec7d958-b0cc-4d5f-9e8c-45e3f20b728e
+        example: a870efdd-dcb2-41d6-8854-7522edd56c10
         default: ''
         required: true
         displayName: transactionID
