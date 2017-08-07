@@ -5,7 +5,13 @@ documentation:
 - title: Payment system
   content: 'TODO: Add Description'
 baseUri: http://example.com
-baseUriParameters: {}
+baseUriParameters:
+  url:
+    type: string
+    example: ''
+    default: DefaultParameterValue
+    required: false
+    displayName: url
 /registerUser:
   get:
     displayName: registerUser
@@ -75,7 +81,7 @@ baseUriParameters: {}
       transactionID:
         description: ''
         type: string
-        example: 96297e29-2bcd-49a4-9f18-30af935763fd
+        example: f7ff3329-25d6-4a45-aa25-25e9910d139d
         default: ''
         required: true
         displayName: transactionID
@@ -116,7 +122,7 @@ baseUriParameters: {}
       transactionID:
         description: ''
         type: string
-        example: e013dfd7-88f7-45b3-a575-595d8b8bd6d1
+        example: 39ac77bf-a2d8-418a-823d-991591242ecb
         default: ''
         required: true
         displayName: transactionID
@@ -157,7 +163,7 @@ baseUriParameters: {}
       transactionID:
         description: ''
         type: string
-        example: 8463550b-2565-4c72-b920-f2ab7861b3df
+        example: 0c41fdae-69ab-44c2-8ff8-dae814c69c78
         default: ''
         required: true
         displayName: transactionID
