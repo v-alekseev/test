@@ -72,6 +72,33 @@ baseUriParameters:
         default: ''
         required: true
         displayName: Id_Terminal
+/queryUserAndAgent:
+  get:
+    displayName: queryUserAndAgent
+    description: 'TODO: Add Description'
+    responses: {}
+    queryParameters:
+      Id_Terminal:
+        description: ''
+        type: string
+        example: '{{terminal}}'
+        default: ''
+        required: true
+        displayName: Id_Terminal
+      Customer:
+        description: ''
+        type: string
+        example: '{{user}}'
+        default: ''
+        required: true
+        displayName: Customer
+      Password:
+        description: ''
+        type: string
+        example: '{{password}}'
+        default: ''
+        required: true
+        displayName: Password
 /registerPayment:
   get:
     displayName: registerPayment - success
@@ -81,7 +108,7 @@ baseUriParameters:
       transactionID:
         description: ''
         type: string
-        example: f7ff3329-25d6-4a45-aa25-25e9910d139d
+        example: c6651008-66d4-416a-9ee9-97e3155b0e67
         default: ''
         required: true
         displayName: transactionID
@@ -122,7 +149,7 @@ baseUriParameters:
       transactionID:
         description: ''
         type: string
-        example: 39ac77bf-a2d8-418a-823d-991591242ecb
+        example: c0f1949a-9d78-42e7-8957-906b550528fd
         default: ''
         required: true
         displayName: transactionID
@@ -163,7 +190,7 @@ baseUriParameters:
       transactionID:
         description: ''
         type: string
-        example: 0c41fdae-69ab-44c2-8ff8-dae814c69c78
+        example: 17dabb0a-893b-450f-857c-4094181b76a9
         default: ''
         required: true
         displayName: transactionID
