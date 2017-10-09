@@ -5,16 +5,9 @@ documentation:
 - title: Payment system
   content: 'TODO: Add Description'
 baseUri: http://example.com
-baseUriParameters:
-  url:
-    type: string
-    example: ''
-    default: DefaultParameterValue
-    required: false
-    displayName: url
+baseUriParameters: {}
 /registerUser:
   get:
-    displayName: registerUser
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
@@ -34,7 +27,6 @@ baseUriParameters:
         displayName: Id_Group
 /queryUser:
   get:
-    displayName: queryUser
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
@@ -61,7 +53,6 @@ baseUriParameters:
         displayName: Password
 /querySystemStatus:
   get:
-    displayName: querySystemStatus
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
@@ -74,7 +65,6 @@ baseUriParameters:
         displayName: Id_Terminal
 /queryUserAndAgent:
   get:
-    displayName: queryUserAndAgent
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
@@ -101,14 +91,13 @@ baseUriParameters:
         displayName: Password
 /registerPayment:
   get:
-    displayName: registerPayment - success
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       transactionID:
         description: ''
         type: string
-        example: 77280d12-ee7c-44d3-880a-bf7634c1a122
+        example: e0e0b4c3-945a-45e5-b311-55b3b3c7810f
         default: ''
         required: true
         displayName: transactionID
@@ -142,14 +131,13 @@ baseUriParameters:
         displayName: Amount
 /registerPayoutBegin:
   get:
-    displayName: registerPayoutBegin - success
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       transactionID:
         description: ''
         type: string
-        example: 8d9841f5-63ab-4170-bb93-e8ce13f96376
+        example: da88860f-442b-41ee-b410-8e26099c072a
         default: ''
         required: true
         displayName: transactionID
@@ -183,14 +171,13 @@ baseUriParameters:
         displayName: Amount
 /registerPayoutEnd:
   get:
-    displayName: registerPayoutEnd - success
     description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       transactionID:
         description: ''
         type: string
-        example: 690b63ab-028c-425f-83e6-1af82cc7dce0
+        example: 0ccc38c3-7a00-4b16-b108-9eb54aca381b
         default: ''
         required: true
         displayName: transactionID
