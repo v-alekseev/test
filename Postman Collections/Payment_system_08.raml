@@ -27,7 +27,7 @@ documentation:
     # Rate limit
 
     Is there a limit to the number of requests an user can send?
-baseUri: http://example.com
+baseUri: https://payment.checksystem.biz
 baseUriParameters: {}
 /registerUser:
   get:
@@ -36,15 +36,15 @@ baseUriParameters: {}
     queryParameters:
       Id_Terminal:
         description: ''
-        type: string
-        example: '{{terminal}}'
+        type: integer
+        example: 1234
         default: ''
         required: true
         displayName: Id_Terminal
       Id_Group:
         description: ''
-        type: string
-        example: '{{groupid}}'
+        type: integer
+        example: 1
         default: ''
         required: true
         displayName: Id_Group
@@ -55,22 +55,22 @@ baseUriParameters: {}
     queryParameters:
       Id_Terminal:
         description: ''
-        type: string
-        example: '{{terminal}}'
+        type: integer
+        example: 1234
         default: ''
         required: true
         displayName: Id_Terminal
       Customer:
         description: ''
-        type: string
-        example: '{{user}}'
+        type: integer
+        example: ''
         default: ''
         required: true
         displayName: Customer
       Password:
         description: ''
-        type: string
-        example: '{{password}}'
+        type: integer
+        example: 8401
         default: ''
         required: true
         displayName: Password
@@ -81,8 +81,8 @@ baseUriParameters: {}
     queryParameters:
       Id_Terminal:
         description: ''
-        type: string
-        example: '{{terminal}}'
+        type: integer
+        example: 1234
         default: ''
         required: true
         displayName: Id_Terminal
@@ -94,35 +94,35 @@ baseUriParameters: {}
       transactionID:
         description: ''
         type: string
-        example: 9f1b8b90-d220-41be-b376-4d636914a45a
+        example: ab4f1597-2250-40d7-bd4a-82ff2bfdf9bb
         default: ''
         required: true
         displayName: transactionID
       Id_Terminal:
         description: ''
-        type: string
-        example: '{{terminal}}'
+        type: integer
+        example: 1234
         default: ''
         required: true
         displayName: Id_Terminal
       Customer:
         description: ''
-        type: string
-        example: '{{user}}'
+        type: integer
+        example: ''
         default: ''
         required: true
         displayName: Customer
       Password:
         description: ''
-        type: string
-        example: '{{password}}'
+        type: integer
+        example: 8401
         default: ''
         required: true
         displayName: Password
       Amount:
         description: ''
-        type: string
-        example: '{{amount}}'
+        type: number
+        example: 100.00
         default: ''
         required: true
         displayName: Amount
@@ -134,35 +134,35 @@ baseUriParameters: {}
       transactionID:
         description: ''
         type: string
-        example: b9c988ff-8829-4ff3-88b6-a67e559486f3
+        example: b84cbd39-5013-4f18-af0e-628e7c615e67
         default: ''
         required: true
         displayName: transactionID
       Id_Terminal:
         description: ''
-        type: string
-        example: '{{terminal}}'
+        type: integer
+        example: 1234
         default: ''
         required: true
         displayName: Id_Terminal
       Customer:
         description: ''
-        type: string
-        example: '{{user}}'
+        type: integer
+        example: ''
         default: ''
         required: true
         displayName: Customer
       Password:
         description: ''
-        type: string
-        example: '{{password}}'
+        type: integer
+        example: 8401
         default: ''
         required: true
         displayName: Password
       Amount:
         description: ''
-        type: string
-        example: '{{amount}}'
+        type: number
+        example: 100.00
         default: ''
         required: true
         displayName: Amount
@@ -174,35 +174,35 @@ baseUriParameters: {}
       transactionID:
         description: ''
         type: string
-        example: fbb2207c-6f09-4d7c-85eb-39f459c44306
+        example: 11663bfd-42cb-447e-adf6-c3acb69d6e1e
         default: ''
         required: true
         displayName: transactionID
       BeginTransactionID:
         description: ''
         type: string
-        example: '{{last_registerPayoutBeginTrID}}'
+        example: undefined
         default: ''
         required: true
         displayName: BeginTransactionID
       Id_Terminal:
         description: ''
-        type: string
-        example: '{{terminal}}'
+        type: integer
+        example: 1234
         default: ''
         required: true
         displayName: Id_Terminal
       Customer:
         description: ''
-        type: string
-        example: '{{user}}'
+        type: integer
+        example: ''
         default: ''
         required: true
         displayName: Customer
       Password:
         description: ''
-        type: string
-        example: '{{password}}'
+        type: integer
+        example: 8401
         default: ''
         required: true
         displayName: Password
@@ -215,15 +215,15 @@ baseUriParameters: {}
         displayName: dispenseStatus
       Amount:
         description: ''
-        type: string
-        example: '{{amount}}'
+        type: number
+        example: 100.00
         default: ''
         required: true
         displayName: Amount
       WithdrawalAmount:
         description: ''
-        type: string
-        example: '{{amount}}'
+        type: number
+        example: 100.00
         default: ''
         required: true
         displayName: WithdrawalAmount
