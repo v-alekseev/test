@@ -31,174 +31,144 @@ baseUri: http://example.com
 baseUriParameters: {}
 /registerUser:
   get:
-    description: ''
     responses: {}
     queryParameters:
       Id_Terminal:
-        description: ''
         type: string
         example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Id_Group:
-        description: ''
         type: string
         example: '{{groupid}}'
         required: true
         displayName: Id_Group
 /queryUser:
   get:
-    description: ''
     responses: {}
     queryParameters:
       Id_Terminal:
-        description: ''
         type: string
         example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        description: ''
         type: string
         example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        description: ''
         type: string
         example: '{{password}}'
         required: true
         displayName: Password
 /querySystemStatus:
   get:
-    description: ''
     responses: {}
     queryParameters:
       Id_Terminal:
-        description: ''
         type: string
         example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
 /registerPayment:
   get:
-    description: ''
     responses: {}
     queryParameters:
       transactionID:
-        description: ''
         type: string
-        example: c8bc880c-d4f7-4abc-a9e8-5589ceff5e93
+        example: e89f99df-3e00-4c44-8853-535ac90a583b
         required: true
         displayName: transactionID
       Id_Terminal:
-        description: ''
         type: string
         example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        description: ''
         type: string
         example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        description: ''
         type: string
         example: '{{password}}'
         required: true
         displayName: Password
       Amount:
-        description: ''
         type: string
         example: '{{amount}}'
         required: true
         displayName: Amount
 /registerPayoutBegin:
   get:
-    description: ''
     responses: {}
     queryParameters:
       transactionID:
-        description: ''
         type: string
-        example: fe3f4179-484b-4dbb-8fb5-eaaa05880c16
+        example: 56608b3a-54b9-4dcb-aea6-1f624136d4d8
         required: true
         displayName: transactionID
       Id_Terminal:
-        description: ''
         type: string
         example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        description: ''
         type: string
         example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        description: ''
         type: string
         example: '{{password}}'
         required: true
         displayName: Password
       Amount:
-        description: ''
         type: string
         example: '{{amount}}'
         required: true
         displayName: Amount
 /registerPayoutEnd:
   get:
-    description: ''
     responses: {}
     queryParameters:
       transactionID:
-        description: ''
         type: string
-        example: 937ed6d2-a5c8-45d6-96b7-e2d2c292ea9d
+        example: 27bf1cfb-8896-49b5-9b0f-4e8aed43abaf
         required: true
         displayName: transactionID
       BeginTransactionID:
-        description: ''
         type: string
         example: '{{last_registerPayoutBeginTrID}}'
         required: true
         displayName: BeginTransactionID
       Id_Terminal:
-        description: ''
         type: string
         example: '{{terminal}}'
         required: true
         displayName: Id_Terminal
       Customer:
-        description: ''
         type: string
         example: '{{user}}'
         required: true
         displayName: Customer
       Password:
-        description: ''
         type: string
         example: '{{password}}'
         required: true
         displayName: Password
       dispenseStatus:
-        description: ''
         type: string
         example: successful
         required: true
         displayName: dispenseStatus
       Amount:
-        description: ''
         type: string
         example: '{{amount}}'
         required: true
         displayName: Amount
       WithdrawalAmount:
-        description: ''
         type: string
         example: '{{amount}}'
         required: true
