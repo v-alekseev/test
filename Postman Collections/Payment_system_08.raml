@@ -31,6 +31,7 @@ baseUri: http://example.com
 baseUriParameters: {}
 /registerUser:
   get:
+    description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       Id_Terminal:
@@ -45,6 +46,7 @@ baseUriParameters: {}
         displayName: Id_Group
 /queryUser:
   get:
+    description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       Id_Terminal:
@@ -64,6 +66,7 @@ baseUriParameters: {}
         displayName: Password
 /querySystemStatus:
   get:
+    description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       Id_Terminal:
@@ -73,11 +76,12 @@ baseUriParameters: {}
         displayName: Id_Terminal
 /registerPayment:
   get:
+    description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       transactionID:
         type: string
-        example: f75121f5-2637-4bb7-b2bc-02afdcfe57a6
+        example: 48b2d58b-c548-4059-b320-a9cacc6f7366
         required: true
         displayName: transactionID
       Id_Terminal:
@@ -102,11 +106,12 @@ baseUriParameters: {}
         displayName: Amount
 /registerPayoutBegin:
   get:
+    description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       transactionID:
         type: string
-        example: 23197b16-cd63-4c01-a96b-926352d3bb42
+        example: 960a4559-a77b-42cf-9247-0d829e1ee1b7
         required: true
         displayName: transactionID
       Id_Terminal:
@@ -131,11 +136,12 @@ baseUriParameters: {}
         displayName: Amount
 /registerPayoutEnd:
   get:
+    description: 'TODO: Add Description'
     responses: {}
     queryParameters:
       transactionID:
         type: string
-        example: 76bee714-47bb-43ec-be94-37e057c155f9
+        example: 6da3e831-aa62-4630-b515-87e99da451a8
         required: true
         displayName: transactionID
       BeginTransactionID:
