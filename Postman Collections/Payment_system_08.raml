@@ -7,12 +7,9 @@
   },
   "item": [
     {
-      "_postman_id": "1388535-13a7d76f-1e08-e240-9344-584df160628d",
       "name": "1. Init req",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1388535-86ad8bc3-5d03-3451-c68f-4f61f21c1c85",
           "name": "registerUser",
           "event": [
             {
@@ -54,10 +51,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-86ad8bc3-5d03-3451-c68f-4f61f21c1c85",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/registerUser?Id_Terminal=1234&Id_Group=1",
               "protocol": "https",
@@ -70,28 +71,24 @@
               "query": [
                 {
                   "key": "Id_Terminal",
-                  "value": "1234",
-                  "equals": true
+                  "value": "1234"
                 },
                 {
                   "key": "Id_Group",
-                  "value": "1",
-                  "equals": true
+                  "value": "1"
                 }
               ]
             }
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1388535-13a7d76f-1e08-e240-9344-584df160628d"
     },
     {
-      "_postman_id": "1388535-683f89e8-ecdc-d14a-53da-cb85bf7a1ea8",
       "name": "2. Information req",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1388535-ff172ae0-afda-3445-4046-a89b53d40c5d",
           "name": "queryUser",
           "event": [
             {
@@ -110,10 +107,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-ff172ae0-afda-3445-4046-a89b53d40c5d",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/queryUser?Id_Terminal=1234&Customer=0000000168&Password=8401",
               "protocol": "https",
@@ -142,7 +143,6 @@
           "response": []
         },
         {
-          "_postman_id": "1388535-8c44de80-7c99-b6b6-55f4-d19a5f24a998",
           "name": "querySystemStatus",
           "event": [
             {
@@ -161,10 +161,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-8c44de80-7c99-b6b6-55f4-d19a5f24a998",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/querySystemStatus?Id_Terminal=1234",
               "protocol": "https",
@@ -177,23 +181,20 @@
               "query": [
                 {
                   "key": "Id_Terminal",
-                  "value": "1234",
-                  "equals": true
+                  "value": "1234"
                 }
               ]
             }
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1388535-683f89e8-ecdc-d14a-53da-cb85bf7a1ea8"
     },
     {
-      "_postman_id": "1388535-d7ce879d-9823-b995-6f81-a964c29a3fa0",
       "name": "3. PayIn (empty)",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1388535-14161c2b-70f3-5cad-3039-75c4135e9001",
           "name": "registerPayment - success",
           "event": [
             {
@@ -214,10 +215,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-14161c2b-70f3-5cad-3039-75c4135e9001",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/registerPayment?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
               "protocol": "https",
@@ -253,15 +258,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1388535-d7ce879d-9823-b995-6f81-a964c29a3fa0"
     },
     {
-      "_postman_id": "1388535-356de311-3255-975f-9e57-d8411d65311c",
       "name": "5. PayOut fail",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1388535-34c68835-8bcc-58ca-8b0e-60659a91568f",
           "name": "registerPayment - fail",
           "event": [
             {
@@ -283,10 +286,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-34c68835-8bcc-58ca-8b0e-60659a91568f",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/registerPayment?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
               "protocol": "https",
@@ -323,7 +330,6 @@
           "response": []
         },
         {
-          "_postman_id": "1388535-29e3261f-279d-e59a-36c1-0012f8ad300d",
           "name": "registerPayoutBegin - fail",
           "event": [
             {
@@ -344,10 +350,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-29e3261f-279d-e59a-36c1-0012f8ad300d",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/registerPayoutBegin?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
               "protocol": "https",
@@ -384,7 +394,6 @@
           "response": []
         },
         {
-          "_postman_id": "1388535-b678064a-3294-d0c7-9f88-7340aacc25b0",
           "name": "registerPayoutEnd - fail",
           "event": [
             {
@@ -407,10 +416,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-b678064a-3294-d0c7-9f88-7340aacc25b0",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/registerPayoutEnd?transactionID={{$guid}}&BeginTransactionID=undefined&Id_Terminal=1234&Customer=0000000168&Password=8401&dispenseStatus=fail&Amount=100.00&WithdrawalAmount=0.00",
               "protocol": "https",
@@ -458,15 +471,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1388535-356de311-3255-975f-9e57-d8411d65311c"
     },
     {
-      "_postman_id": "1388535-2bf9303d-d2a7-6e9f-26eb-2e1d777d443d",
       "name": "6. PayOut success",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1388535-1e44211f-ca6a-19a5-4acb-746e2cd8090a",
           "name": "registerPayment - success",
           "event": [
             {
@@ -487,10 +498,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-1e44211f-ca6a-19a5-4acb-746e2cd8090a",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/registerPayment?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
               "protocol": "https",
@@ -527,7 +542,6 @@
           "response": []
         },
         {
-          "_postman_id": "1388535-ed2f618b-9395-1a4b-10db-2fa39b96c7a8",
           "name": "registerPayoutBegin - success",
           "event": [
             {
@@ -549,10 +563,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-ed2f618b-9395-1a4b-10db-2fa39b96c7a8",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/registerPayoutBegin?transactionID={{$guid}}&Id_Terminal=1234&Customer=0000000168&Password=8401&Amount=100.00",
               "protocol": "https",
@@ -589,7 +607,6 @@
           "response": []
         },
         {
-          "_postman_id": "1388535-86877a53-45da-26e6-0d5c-881098c0f36e",
           "name": "registerPayoutEnd - success",
           "event": [
             {
@@ -609,10 +626,14 @@
               }
             }
           ],
+          "_postman_id": "1388535-86877a53-45da-26e6-0d5c-881098c0f36e",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://payment.checksystem.biz/registerPayoutEnd?transactionID={{$guid}}&BeginTransactionID=undefined&Id_Terminal=1234&Customer=0000000168&Password=8401&dispenseStatus=successful&Amount=100.00&WithdrawalAmount=100.00",
               "protocol": "https",
@@ -660,7 +681,8 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1388535-2bf9303d-d2a7-6e9f-26eb-2e1d777d443d"
     }
   ]
 }
