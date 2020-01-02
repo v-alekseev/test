@@ -33,7 +33,6 @@ protocols:
 baseUriParameters: {}
 /registerUser:
   get:
-    description: 'TODO: Add Description'
     responses:
       200:
         description: Success
@@ -50,7 +49,6 @@ baseUriParameters: {}
         displayName: Id_Group
 /queryUser:
   get:
-    description: 'TODO: Add Description'
     responses:
       200:
         description: Success
@@ -72,7 +70,6 @@ baseUriParameters: {}
         displayName: Password
 /querySystemStatus:
   get:
-    description: 'TODO: Add Description'
     responses:
       200:
         description: Success
@@ -84,14 +81,13 @@ baseUriParameters: {}
         displayName: Id_Terminal
 /registerPayment:
   get:
-    description: 'TODO: Add Description'
     responses:
       200:
         description: Success
     queryParameters:
       transactionID:
         type: string
-        example: 757a09ed-58dc-47e3-9d3a-e1f35aef0053
+        example: c9258e27-7fa9-4638-bd14-f05954127a79
         required: true
         displayName: transactionID
       Id_Terminal:
@@ -116,14 +112,13 @@ baseUriParameters: {}
         displayName: Amount
 /registerPayoutBegin:
   get:
-    description: 'TODO: Add Description'
     responses:
       200:
         description: Success
     queryParameters:
       transactionID:
         type: string
-        example: 29f7fe4c-35e5-4783-8879-f0b2a03ef0f8
+        example: b21107f2-6f72-4f97-bace-3e428b96b900
         required: true
         displayName: transactionID
       Id_Terminal:
@@ -148,14 +143,13 @@ baseUriParameters: {}
         displayName: Amount
 /registerPayoutEnd:
   get:
-    description: 'TODO: Add Description'
     responses:
       200:
         description: Success
     queryParameters:
       transactionID:
         type: string
-        example: b34d771e-2a7a-41b4-a1a3-e8f7d46ab40e
+        example: 30ca9d51-cde8-4b99-ab51-92725e54aa78
         required: true
         displayName: transactionID
       BeginTransactionID:
